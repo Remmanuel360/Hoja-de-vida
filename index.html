@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura la correcta visualización en dispositivos móviles -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Carga íconos de FontAwesome vía CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Carga estilos de FontAwesome -->
+    <title>CV Emmanuel Redondo</title> <!-- Título que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo CSS externo -->
+</head>
+<body>
+  <div class="contenedor"> <!-- Contenedor principal de toda la página -->
+    <div class="Cuadro"> <!-- Cuadro que contiene el menú y el contenido -->
+    
+    <input type="checkbox" id="active"> <!-- Checkbox oculto que controla el estado del menú -->
+    
+    <label for="active" class="menu-btn"> <!-- Etiqueta que actúa como botón para abrir/cerrar el menú -->
+      <span></span> <!-- Línea 1 del ícono de menú -->
+      <span></span> <!-- Línea 2 del ícono de menú -->
+      <span></span> <!-- Línea 3 del ícono de menú -->
+    </label>
+      
+      <div class="Menu"> <!-- Menú desplegable -->
+        <ul> <!-- Lista de opciones del menú -->
+            <li><a href="#" onclick="scrollToTop()">Principio</a></li> <!-- Enlace que lleva al principio de la página -->
+            <li><a href="#" onclick="toggleSeccion('btn-formacion')">Títulos</a></li> <!-- Muestra/oculta la sección de títulos -->
+            <li><a href="#" onclick="toggleSeccion('btn-cursos')">Cursos</a></li> <!-- Muestra/oculta la sección de cursos -->
+            <li><a href="#" onclick="toggleSeccion('btn-experiencia')">Experiencia</a></li> <!-- Muestra/oculta la sección de experiencia -->
+        </ul>
+      </div>
+      
+      <div class="content"> <!-- Contenedor del contenido principal -->
+        <div class="encabezado"> <!-- Encabezado con nombre y título -->
+            <div class="titulo">Emmanuel Redondo Correa
+            <h6>Tecnólogo en Desarrollo de Software</h6></div>
+            <br><br>
+            <div class="datos-personales"> <!-- Información de contacto -->
+                <p><i class="fas fa-user"></i> Emmanuel Redondo Correa</p>
+                <p><i class="fas fa-envelope"></i> emmanuelredondo50@email.com</p>
+                <p><i class="fas fa-phone"></i> +57 302 620 7084</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+            </div>
+        </div>
+        
+        <div class="foto"><img src="imagenes/foto-de-signo.jpg" alt="Foto"></div> <!-- Foto de perfil -->
+
+        <div class="perfil"><h2>Perfil Profesional</h2> <!-- Sección del perfil -->
+            <hr style="border: none; height: 3px; background-color:rgb(198, 178, 132); width: 50%;"> <!-- Línea decorativa -->
+            <br><br>
+            <p>Profesional en formación con alta capacidad de aprendizaje, proactivo y comprometido con la mejora continua. Posee habilidades para 
+            aplicar conocimientos de manera práctica y aportar ideas innovadoras en el desarrollo de soluciones. Se destaca por su organización, 
+            responsabilidad y puntualidad en la ejecución de tareas, así como por su capacidad para trabajar de forma autónoma o en equipo, 
+            optimizando procesos y colaborando eficazmente en entornos dinámicos.</p>
+        </div>
+        
+        <br><br>
+        <div class="relleno"> <!-- Contenedor para las demás secciones -->
+        
+        <h2 class="interactivo" id="btn-formacion">Formación Académica</h2> <!-- Título interactivo para formación -->
+        <hr style="border: none; height: 3px; background-color:rgb(198, 178, 132); width: 60%;"> <!-- Línea decorativa -->
+        <br><br>
+        <div class="estudios"> <!-- Lista de estudios -->
+        <ul>
+          <li><h3>Tecnología en Desarrollo de Software</h3>
+            <p>Universitaria Agustiniana</p><p>2024-Actualmente</p></li>
+          <li><h3>Tecnólogo en Mantenimiento Mecatrónico de Automotores</h3>
+            <p>SENA Centro de Tecnologías del Transporte</p><p>2020-2022</p></li>
+          <li><h3>Bachiller Técnico con énfasis en Mecatrónica</h3>
+            <p>INEM Francisco de Paula Santander</p><p>2019</p></li>
+        </ul>
+        </div>
+        
+        <br><br>
+        <h2 class="interactivo" id="btn-cursos">Cursos Complementarios</h2> <!-- Título interactivo para cursos -->
+        <hr style="border: none; height: 3px; background-color:rgb(198, 178, 132); width: 60%;">
+        <br><br>
+        <div class="complemento"> <!-- Lista de cursos -->
+        <ul>
+          <li><h3>English Without Borders</h3>
+            <p>British Council</p><p>2023  120 horas</p></li>
+          <li><h3>Desarrollo de videojuegos Nivel Basico</h3>
+            <p>Universidad Nacional</p><p>2023</p></li>
+        </ul>
+        </div>
+        
+        <br><br>
+        <h2 class="interactivo" id="btn-experiencia">Experiencia Laboral</h2> <!-- Título interactivo para experiencia -->
+        <hr style="border: none; height: 3px; background-color:rgb(198, 178, 132); width: 60%;">
+        <br><br>
+        <div class="exp"> <!-- Lista de experiencias laborales -->
+        <ul>
+          <li><h3>En desarrollo de Software</h3>
+            <p>En eso andamos :D</p></li>
+          <li><h3>Electrico C Automotriz</h3>
+            <p>Gmovil S.A.S</p><p>2024-Actualmente</p></li>
+          <li><h3>Auxiliar Electrico Automotriz</h3>
+            <p>Inversiones Aldemar S,A.</p><p>2022-2024</p></li>
+        </ul>
+        </div>
+        <br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script> <!-- Vincula el archivo JavaScript externo -->
+</body>
+</html>

@@ -1,0 +1,287 @@
+* {
+  margin: 0; /* Quita margen por defecto */
+  padding: 0; /* Quita padding por defecto */
+  box-sizing: border-box; /* Incluye padding y borde en ancho/alto */
+  font-family: 'Oswald', sans-serif; /* Fuente principal */
+}
+
+body {
+  background-color: rgb(255, 235, 187); /* Color fondo */
+  min-height: 100vh; /* Altura mínima pantalla completa */
+  margin: 0; /* Sin margen */
+}
+
+/* Contenedor principal */
+.contenedor {
+  width: 100%; /* Ancho completo */
+  padding: 3% 3%; /* Relleno 3% arriba/abajo y lados */
+  box-sizing: border-box; /* Incluye padding en ancho */
+}
+
+/* Cuadro blanco */
+.Cuadro {
+  background-color: white; /* Fondo blanco */
+  padding: 40px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+  width: 100%; /* Ancho completo */
+  overflow: hidden; /* Oculta contenido fuera del cuadro */
+  position: relative; /* Para posicionar elementos hijos */
+}
+
+input[type="checkbox"] {
+  display: none; /* Oculta checkbox */
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: rgba(255, 235, 187, 0.626); /* Fondo semitransparente */
+  height: 350px; /* Altura fija */
+  width: calc(100% + 80px); /* Ancho extendido más padding */
+  margin-top: -141px; /* Sube sobre cuadro */
+  margin-left: -40px; /* Elimina margen lateral */
+  margin-right: -40px; /* Elimina margen lateral */
+}
+
+.datos-personales{
+  margin-top: -2%; /* Sube ligeramente */
+  margin-left: 55%; /* Posiciona a la derecha */
+  margin-right: 10%; /* Margen derecho */
+}
+
+.datos-personales p {
+  margin: 10px 0; /* Margen vertical */
+  cursor: pointer; /* Cursor mano */
+  transition: color 0.3s ease; /* Animación suave color */
+  color: #000; /* Color negro */
+  display: flex; /* Flex para ícono y texto */
+  align-items: center; /* Alinea vertical */
+}
+
+.datos-personales p:hover {
+  color: rgb(198, 178, 132); /* Color dorado al pasar mouse */
+}
+
+.datos-personales i {
+  margin-right: 10px; /* Espacio entre ícono y texto */
+  transition: color 0.3s ease; /* Animación color ícono */
+}
+
+.datos-personales p:hover i {
+  color: rgb(198, 178, 132); /* Ícono cambia igual que texto */
+}
+
+/* Contenedor interno de imagen y datos */
+.contenido-perfil {
+  display: flex; /* Contenido en fila */
+  padding: 20px; /* Relleno interno */
+  gap: 20px; /* Espacio entre hijos */
+  align-items: center; /* Centra vertical */
+}
+
+/* Imagen perfil */
+.foto img {
+  width: 30%; /* Ancho relativo */
+  height: 10%; /* Alto pequeño */
+  object-fit: cover; /* Recorta imagen sin distorsión */
+  border-radius: 50%; /* Imagen circular */
+  margin-top: -2%; /* Sube un poco */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra leve */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
+}
+
+.foto img:hover {
+  transform: scale(1.10); /* Agranda al pasar mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.titulo{
+  padding: 4% 10%; /* Espacio interno arriba/lat */
+}
+
+.foto{
+  margin-top: -9%; /* Ajusta posición vertical */
+  margin-left: 10%; /* Ajusta posición horizontal */
+  z-index: 1; /* Apila arriba */
+  border-radius: 50%; /* Redondea contenedor */
+}
+
+.perfil{
+  margin-top: -8%; /* Ajusta posición vertical */
+  margin-left: 55%; /* Ajusta posición horizontal */
+  margin-right: 10%; /* Margen derecho */
+  z-index: 1; /* Apila arriba */
+}
+
+/* Animaciones subtítulos */
+.relleno{
+  margin-left: 5%; /* Margen izquierdo */
+}
+
+h2.interactivo {
+  cursor: pointer; /* Cursor mano */
+  transition: color 0.3s ease; /* Cambio color suave */
+  color: #000; /* Color negro */
+}
+
+h2.interactivo:hover {
+  color: rgba(208, 163, 58, 0.93); /* Color dorado al pasar */
+}
+
+/* Oculta contenido inicialmente con animación */
+.estudios, .complemento, .exp {
+  max-height: 0; /* Altura 0 para ocultar */
+  opacity: 0; /* Transparente */
+  overflow: hidden; /* Oculta overflow */
+  margin-top: 0; /* Sin margen superior */
+  margin-left: 3%; /* Margen izquierdo pequeño */
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease; /* Animaciones */
+}
+
+/* Muestra contenido cuando tiene clase 'mostrar' */
+.mostrar {
+  max-height: 1000px; /* Altura grande para mostrar */
+  opacity: 1; /* Opaco */
+  margin-top: 15px; /* Margen arriba */
+}
+
+/* Botón menú */
+.menu-btn {
+  position: absolute; /* Posición absoluta */
+  top: 20px; /* Separado arriba */
+  left: 20px; /* Separado izquierda */
+  height: 50px; /* Alto */
+  width: 50px; /* Ancho */
+  cursor: pointer; /* Cursor mano */
+  display: flex; /* Flex para líneas */
+  flex-direction: column; /* Apila vertical */
+  justify-content: center; /* Centra vertical */
+  align-items: center; /* Centra horizontal */
+  gap: 6px; /* Espacio entre líneas */
+  z-index: 3; /* Por encima */
+}
+
+.menu-btn span {
+  display: block; /* Mostrar como bloque */
+  width: 25px; /* Ancho línea */
+  height: 2px; /* Alto línea */
+  background-color: rgb(255, 235, 187); /* Color claro */
+  border-radius: 2px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave */
+  transform-origin: center; /* Punto de transformación */
+}
+
+/* Transformaciones para "X" al abrir menú */
+#active:checked + .menu-btn span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#active:checked + .menu-btn span:nth-child(2) {
+  opacity: 0; /* Oculta línea central */
+}
+
+#active:checked + .menu-btn span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menú desplegable */
+.Menu {
+  position: absolute; /* Posición absoluta */
+  top: 0; /* Arriba */
+  left: 0; /* Izquierda */
+  height: 50%; /* Alto 50% */
+  width: 35%; /* Ancho 35% */
+  background: #000; /* Fondo negro */
+  clip-path: circle(25px at 45px 45px); /* Máscara círculo pequeño */
+  transition: clip-path 0.3s ease-in-out; /* Transición suave */
+  z-index: 2; /* Por encima */
+}
+
+/* Menú abierto: círculo grande y desplazado */
+#active:checked + label + .Menu {
+  clip-path: circle(60% at 25% 25%);
+}
+
+.Menu ul {
+  position: absolute; /* Absoluto para centrar */
+  top: 40%; /* Desde arriba */
+  left: 40%; /* Desde izquierda */
+  transform: translate(-50%, -50%); /* Centrado exacto */
+  list-style: none; /* Sin viñetas */
+  text-align: center; /* Texto centrado */
+}
+
+.Menu ul li {
+  margin: 15px 0; /* Margen vertical */
+}
+
+.Menu ul li a {
+  position: relative; /* Relativo para ::after */
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 24px; /* Tamaño fuente */
+  padding: 10px 20px; /* Relleno */
+  background: #000; /* Fondo negro */
+  border-radius: 30px; /* Bordes redondeados */
+  display: inline-block; /* Bloque en línea */
+  z-index: 1; /* Encima */
+  overflow: hidden; /* Oculta overflow */
+}
+
+.Menu ul li a::after {
+  content: ""; /* Elemento vacío */
+  position: absolute; /* Absoluto */
+  top: -5%; /* Pequeño desplazamiento */
+  left: -5%; /* Pequeño desplazamiento */
+  width: 110%; /* Más ancho que el enlace */
+  height: 110%; /* Más alto que el enlace */
+  background: linear-gradient( /* Gradiente animado */
+    45deg,
+    rgb(255, 235, 187),
+    rgba(251, 202, 95, 0.993),
+    rgb(252, 177, 0)
+  );
+  background-size: 200% 200%; /* Tamaño doble para animar */
+  z-index: -1; /* Debajo del texto */
+  transform: scaleY(0); /* Escala vertical a 0 */
+  border-radius: 30px; /* Bordes redondeados */
+  transition: transform 0.2s ease; /* Transición suave */
+  animation: cremaGlow 2s ease-in-out infinite; /* Animación continua */
+}
+
+.Menu ul li a:hover::after {
+  transform: scaleY(1); /* Escala vertical completa al pasar */
+}
+
+@keyframes cremaGlow {
+  0% {
+    background-position: 0% 50%; /* Inicio gradiente */
+  }
+  50% {
+    background-position: 100% 50%; /* Movimiento medio */
+  }
+  100% {
+    background-position: 0% 50%; /* Retorno al inicio */
+  }
+}
+
+/* Contenido principal */
+.content {
+  position: relative; /* Relativo para apilar */
+  z-index: 1; /* Apila detrás del menú */
+  margin-top: 100px; /* Margen superior */
+}
+
+.content .titulo {
+  font-size: 36px; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+} 
+
+.content p {
+  font-size: 17px; /* Tamaño mediano */
+  font-weight: 500; /* Peso medio */
+}
+
+
+
+  
